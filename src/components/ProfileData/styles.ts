@@ -16,7 +16,7 @@ export const Flex = styled.div`
     > h1 {
       font-size: 2.6rem;
       line-height: 1.25;
-      color: var(--grey-dark);
+      color: var(--gray-dark);
       font-weight: 600;
     }
     > h2 {
@@ -39,6 +39,7 @@ export const Avatar = styled.img`
   border-radius: 50%;
   @media (min-width: 768px) {
     width: 100%;
+    margin-top: -4.8rem;
   }
 `
 export const Row = styled.ul`
@@ -51,7 +52,7 @@ export const Row = styled.ul`
     align-items: center;
     > span {
       font-size: 1.4rem;
-      color: var(--grey);
+      color: var(--gray);
     }
     > * {
       margin-right: 0.6rem;

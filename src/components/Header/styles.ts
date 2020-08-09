@@ -9,10 +9,14 @@ export const Container = styled.div`
 `
 
 export const GithubLogo = styled(FaGithub)`
-  fill: var(--primary);
+  fill: var(--logo);
   width: 3.2rem;
   height: 3.2rem;
   flex-shrink: 0;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
 `
 export const SearchForm = styled.form`
   padding-left: 1.6rem;
@@ -28,4 +32,10 @@ export const Input = styled.input.attrs({
   &:focus {
     width: 31.8rem;
   }
+`
+export const GithubIcon = styled(FaGithub)`
+  fill: var(--icon);
+  width: 1.6rem;
+  height: 1.6rem;
+  flex-shrink: 0;
 `

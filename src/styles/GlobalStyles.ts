@@ -2,31 +2,16 @@ import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
   :root {
-    font-size: 62.5%;
-      --primary: #ffffff;
-      --black: #1b1f23;
-      --grey: #586069;
-      --grey-light: #6a737d;
-      --grey-dark: #24292e;
-      --orange: #f9826c;
-      --header: #24292e;
-      --username: #666;
-      --search: rgba(255, 255, 255, 0.13);
-      --search-placeholder: hsla(0,0%,100%,.75);
-      --icon: #6a737d;
-      --link: #0366d6;
-      --border: #e1e4e8;
-      --ticker: rgba(209,213,218,.5);
-      --calendar-scale-0: #ebedf0;
-      --calendar-scale-1: #9BE9A8;
-      --calendar-scale-2: #3FC463;
-      --calendar-scale-3: #30A14E;
-      --calendar-scale-4: #216E3A;
-      --javascript: #f1e05a;
-      --typescript: #2b7489;
-      --other-language: #8257e5;
+    ${({ theme }) => {
+      let append = ''
+      Object.entries(theme).forEach(([prop, value]) => {
+        append += `--${prop}: ${value};`
+      })
+      return append
+    }}
   }
   html {
+    font-size: 62.5%;
     min-height: 100%;
     background:  var(--primary);
   }
@@ -45,6 +30,7 @@ export default createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: color .2s ease-out;
   }
   button {
     cursor: pointer;
