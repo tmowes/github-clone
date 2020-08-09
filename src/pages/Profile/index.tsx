@@ -1,11 +1,29 @@
 import React from 'react'
 
-import { Container } from './styles'
+import { Container, Main, LeftSide, RightSide } from './styles'
+import ProfileData from '../../components/ProfileData'
 
 const Profile: React.FC = () => {
   return (
     <Container>
-      <h1>Profile</h1>
+      <Main>
+        <LeftSide>
+          <ProfileData
+            username="tmowes"
+            name="Julius Mowes"
+            avatarUrl="https://github.com/tmowes.png"
+            followers={887}
+            following={69}
+            company="PikTew"
+            location="Timbó,SC Brazil"
+            email="t-mowes@hotmail.com"
+            blog="https://www.linkedin.com/in/julio-cesar-mowes/"
+          />
+        </LeftSide>
+        <RightSide>
+          <h1>RightSide</h1>
+        </RightSide>
+      </Main>
     </Container>
   )
 }

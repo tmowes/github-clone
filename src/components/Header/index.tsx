@@ -1,11 +1,14 @@
 import React from 'react'
 
-import { Container } from './styles'
+import { Container, GithubLogo, SearchForm, Input } from './styles'
 
 const Header: React.FC = () => {
   return (
     <Container>
-      <h1>Header</h1>
+      <GithubLogo />
+      <SearchForm>
+        <Input />
+      </SearchForm>
     </Container>
   )
 }
