@@ -14,6 +14,7 @@ export default createGlobalStyle`
     font-size: 62.5%;
     min-height: 100%;
     background:  var(--primary);
+    transition: background-color .2s ease-out;
   }
   * {
     margin: 0;

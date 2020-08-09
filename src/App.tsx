@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 import { ThemeName, themes } from './styles/themes'
 
 const App: React.FC = () => {
-  const [themeName, setThemeName] = useState<ThemeName>('light')
+  const [themeName, setThemeName] = useState<ThemeName>('dark')
   const currentTheme = themes[themeName]
   return (
     <ThemeProvider theme={currentTheme}>
